@@ -21,7 +21,10 @@ class CalculatorController extends Controller
             $data = $request->only(['distance1', 'distance2']);
             $sum = $this->distanceCalculatorService->calculate($unit, $data);
 
-            return ['Sum' => $sum];
+            return [
+                'Sum' => $sum,
+                'unit' =>$unit
+            ];
         }
     }
 }
