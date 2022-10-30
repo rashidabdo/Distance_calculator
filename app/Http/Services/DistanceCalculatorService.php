@@ -5,8 +5,6 @@ namespace App\Http\Services;
 class DistanceCalculatorService
 {
     protected $calculator;
-    protected $model;
-    protected $data;
 
     public function __construct()
     {
