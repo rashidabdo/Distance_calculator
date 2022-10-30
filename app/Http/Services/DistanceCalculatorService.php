@@ -17,12 +17,9 @@ class DistanceCalculatorService
     {
         $model = $this->calculator->handle($unit);
         $updatedData = $model->converter($data);
-       // print_r($updatedData);die();
         $distances = array_column($updatedData,'value');
-       return $this->sumDistances($distances);
 
-
-//        return $model->sum($updatedData['distance1']['value'], $updatedData['distance2']['value']);
+        return $this->sumDistances($distances);
     }
 
     private function sumDistances(array $distances)
